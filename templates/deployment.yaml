@@ -6,7 +6,7 @@ metadata:
     {{- include "nginx-deployment.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
-  replicas: 0
+  replicas: 1
   {{- end }}
   selector:
     matchLabels:
